@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <title>Westprime Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body {
+      background-color: orange;
+    }
+    section {
+      min-height: 100vh;
+      background-image: url("img100.jpg"); /* Replace with your image URL */
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+      padding: 20px 0;
+    }
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      text-align: center;
+      color: orange; /* Adjusted text color for better readability on the background */
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 25px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-size: 36px;
+    }
+    nav ul li a:hover {
+      background-color: orange;
+    }
+    .mvv-content {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: max-height 0.3s ease;
+      color: #333; /* Adjusted text color for better readability on the background */
+    }
+    .mvv-content.active {
+      display: block;
+      max-height: 500px;
+      overflow: auto;
+    }
+    .mvv-content h2 {
+      margin-bottom: 10px;
+    }
+    .mvv-content p {
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .circular-image {
+      width: 50px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+      border-radius: 50%; /* Make it circular */
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="homee.html"><img src="westprime logo.png" alt="Your Image" class="circular-image">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Program Offered
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="shs.html">Senior High School</a></li>
+                        <li><a class="dropdown-item" href="college.html">College</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="tuitionfees.html">Tuition fees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculty&staff.html">Faculties & Staff</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mission.html">Mission, Vision & Values</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#" id="mvv-toggle-mission">Mission</a></li>
+      <li><a href="#" id="mvv-toggle-vision">Vision</a></li>
+      <li><a href="#" id="mvv-toggle-values">Core Values</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="mvv-content" id="mvv-content-mission">
+        <h2>Mission</h2>
+        <p><strong>West Prime Horizon Institute</strong> is committed to providing quality education for the 21st-century learners through highly competent teachers, a holistic curriculum, and a conducive learning environment with advanced facilities and equipment.</p>
+      </div>
+      
+      <div class="mvv-content" id="mvv-content-vision">
+        <h2>Vision</h2>
+        <p><strong>Vision:</strong> West Prime Horizon Institute envisions mature, highly-skilled, and competent graduates who live with a quality life locally and globally.</p>
+      </div>
+      
+      <div class="mvv-content" id="mvv-content-values">
+        <h2>Core Values</h2>
+        <table>
+          <tr>
+            <th>Passion, Quality, Integrity</th>
+          </tr>
+        </table>
+      </div>      
+  </div>
+</section>
+<script>
+    const mvvToggleMission = document.getElementById('mvv-toggle-mission');
+    const mvvToggleVision = document.getElementById('mvv-toggle-vision');
+    const mvvToggleValues = document.getElementById('mvv-toggle-values');
+    const mvvContentMission = document.getElementById('mvv-content-mission');
+    const mvvContentVision = document.getElementById('mvv-content-vision');
+    const mvvContentValues = document.getElementById('mvv-content-values');
+
+    mvvToggleMission.addEventListener('click', function(e) {
+      e.preventDefault();
+      mvvContentMission.classList.toggle('active');
+      mvvContentVision.classList.remove('active');
+      mvvContentValues.classList.remove('active');
+      mvvToggleMission.textContent = mvvContentMission.classList.contains('active') ? ' Mission' : 'Mission';
+      mvvToggleVision.textContent = 'Vision';
+      mvvToggleValues.textContent = 'Core Values';
+    });
+
+    mvvToggleVision.addEventListener('click', function(e) {
+      e.preventDefault();
+      mvvContentVision.classList.toggle('active');
+      mvvContentMission.classList.remove('active');
+      mvvContentValues.classList.remove('active');
+      mvvToggleVision.textContent = mvvContentVision.classList.contains('active') ? ' Vision' : 'Vision';
+      mvvToggleMission.textContent = 'Mission';
+      mvvToggleValues.textContent = 'Core Values';
+    });
+
+    mvvToggleValues.addEventListener('click', function(e) {
+      e.preventDefault();
+      mvvContentValues.classList.toggle('active');
+      mvvContentMission.classList.remove('active');
+      mvvContentVision.classList.remove('active');
+      mvvToggleValues.textContent = mvvContentValues.classList.contains('active') ? ' Core Values' : 'Core Values';
+      mvvToggleMission.textContent = 'Mission';
+      mvvToggleVision.textContent = 'Vision';
+    });
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

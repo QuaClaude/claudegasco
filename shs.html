@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico.">
+  <title>West Prime Horizon Institute Inc.</title>
+</head>
+
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    section {
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("/1715666098783.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .container {
+      width: 85%;
+      margin: auto;
+    }
+    nav {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav img {
+      width: 150px; /* Adjust the logo size as needed */
+      height: auto;
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+    }
+    nav ul li {
+      list-style: none;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+      padding: 15px 10px;
+      font-size: 20px;
+    }
+    nav ul li a:hover {
+      background-color: #eb7620;
+      transition: 0.5s ease;
+    }
+    nav ul li .active {
+      background-color: #eb7620;
+    }
+    .nav-btn {
+      color: #fff;
+      padding: 10px 20px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #f15048;
+      border-radius: 10px;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .nav-btn:hover {
+      background-color: #4399fa;
+      transition: 0.5s ease;
+    }
+    .article {
+      text-align: center;
+    }
+    .article h1 {
+      font-size: 86px;
+      color: orange;
+      letter-spacing: 1px;
+      font-weight: 500px;
+      margin-top: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .article p {
+      font-size: 46px;
+      color: white;
+      line-height: 1.5;
+      margin-bottom: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .article .btn {
+      color: #fff;
+      padding: 5px 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #f15048;
+      border-radius: 10px;
+      font-size: 36px;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 10px;
+    }
+    .article .btn:hover {
+      background-color: #4399fa;
+      transition: 0.5s ease;
+    }
+    .scroll h1 {
+      font-size: 56px;
+      color: black;
+      background-color: white;
+    }
+    .hero {
+      font-size: 66px;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+    }
+    #slider {
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 50px;
+    }
+    #slider figure {
+      position: relative;
+      width: 2500px;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+    }
+    #slider figure img {
+      float: left;
+      width: 500px;
+    }
+    @keyframes slider {
+      0% { left: 0; }
+      20% { left: 0; }
+      25% { left: -500px; }
+      45% { left: -500px; }
+      50% { left: -1000px; }
+      70% { left: -1000px; }
+      75% { left: -1500px; }
+      95% { left: -1500px; }
+      100% { left: -2000px; }
+    }
+    .table-container, .sr-high-container {
+      margin-top: 50px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .table-container h2, .sr-high-container h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .table-container table, .sr-high-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table-container th, .table-container td, .sr-high-container th, .sr-high-container td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    .table-container th, .sr-high-container th {
+      background-color: #eb7620;
+      color: white;
+    }
+    .circular-image {
+      width: 50px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+      border-radius: 50%; /* Make it circular */
+    }
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      text-align: center;
+      color: orange; /* Adjusted text color for better readability on the background */
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 25px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-size: 36px;
+    }
+    nav ul li a:hover {
+      background-color: orange;
+    }   
+  </style>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homee.html"><img src="westprime logo.png" alt="Your Image" class="circular-image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Program Offered
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shs.html">Senior High School</a></li>
+                            <li><a class="dropdown-item" href="college.html">College</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="tuitionfees.html">Tuition fees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faculty&staff.html">Faculties & Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mission.html">Mission, Vision & Values</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <section>
+    <div class="container">
+        
+      <div class="article">
+        <h1><b>Welcome to Senior High Department!</b></h1>
+        <p>Your future starts here!</p>
+        
+      </div>
+      <div class="table-container">
+        <h2>Student Enrollment by Track in 2nd Semester</h2>
+        <table>
+          <tr>
+            <th>Students Course</th>
+            <th>Total Students</th>
+          </tr>
+          <tr>
+            <td>Science Technology Engineering and Mathematics</td>
+            <td>183</td>
+          </tr>
+          <tr>
+            <td>Accountancy Business Management</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td>Humanities and Social Science</td>
+            <td>348</td>
+          </tr>
+          <tr>
+            <td>Sheilded Metal Arc Weilding</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>Electrical Installation Maintenance</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>Automotive Servicing</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Computer System Servicing</td>
+            <td>110</td>
+          </tr>
+          <tr>
+            <td>Total Students Enrolled</td>
+            <td>91</td>
+          </tr>
+        </table>
+      </div>
+      <div class="sr-high-container">
+        <h2>Senior High Offered Tracks</h2>
+        <table>
+          <tr>
+            <th>Track</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Science Technology Engineering and Mathematics</td>
+            <td>STEM encompasses science, technology, engineering, and mathematics, fostering hands-on learning and problem-solving skills for future careers in fields like robotics, computer science, and biotechnology.</td>
+          </tr>
+          <tr>
+            <td>Accountancy Business Management</td>
+            <td>Accountancy Business Management integrates accounting principles with essential business skills, preparing graduates for diverse roles in finance, corporate management, and strategic decision-making.</td>
+          </tr>
+          <tr>
+            <td>Humanities and Social Science</td>
+            <td>Humanities and Social Sciences study human society, culture, and behavior through disciplines like literature, history, psychology, and economics, providing insights into our past and present and fostering understanding and informed citizenship.</td>
+          </tr>
+          <tr>
+            <td>Sheilded Metal Arc Weilding</td>
+            <td>Shielded Metal Arc Welding (SMAW), or stick welding, joins metals by creating an electric arc between a flux-coated electrode and the workpiece. It's versatile, portable, and commonly used for welding thick materials in construction, pipelines, and fabrication.</td>
+          </tr>
+          <tr>
+            <td>Electrical Installation Maintenance</td>
+            <td>Electrical Installation Maintenance involves the inspection, repair, and upkeep of electrical systems and components to ensure their proper functioning and safety. It includes tasks such as installing wiring, troubleshooting electrical faults, replacing faulty components, and performing routine maintenance checks.</td>
+          </tr>
+          <tr>
+            <td>Automotive Servicing</td>
+            <td>Automotive servicing involves the maintenance, repair, and inspection of vehicles to ensure their optimal performance, safety, and longevity. This includes tasks such as oil changes, tire rotations, brake repairs, engine diagnostics, and general vehicle inspections. Automotive servicing technicians use specialized tools and equipment to diagnose issues and perform necessary repairs, helping to keep vehicles running smoothly and efficiently.</td>
+          </tr>
+          <tr>
+            <td>Computer System Servicing</td>
+            <td>Computer System Servicing encompasses the maintenance, repair, and optimization of computer systems to ensure their efficient operation and longevity. This involves tasks such as hardware installation, software updates, virus removal, troubleshooting, and system diagnostics. Computer technicians use specialized tools and software to diagnose issues and perform necessary repairs, ensuring that computers operate smoothly and securely.</td>
+          </tr>
+          <div class="table-container">
+            <h2>Student Enrollment by Track in 2nd Semester</h2>
+            <table>
+              <tr>
+                <th>Senior High School Requirements</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>Form 138 / Report Card</td>
+                <td ></td>
+              </tr>
+              <tr>
+                <td>Form 137</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>PSA Birth Certificate Original</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Good Moral</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Certificate of Completion</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2x2 Picture (2 pcs)</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="article">
+    <a href="https://docs.google.com/forms/d/1SexZNSnaXQATElUHdeOyjM5FDywQyRpE1RbZPxkwFPk/viewform?fbclid=IwZXh0bgNhZW0CMTAAAR0fIPFv_-3ABl-xSZaTbO3uVvuLiwV11tqAO298XCgcdYHNsvmR7uCRjEA_aem_AQurriWpbiPHK80IFbXLLzG-iZq51lpYVzpmUfsXoRXv6fvmIIl51Mil196HiDvfx9vX4wxhiL-BAM3aX-caT1kk&edit_requested=true" class="btn">Enroll Now</a>
+</div>
+<br>
+<div class="article">
+    <a href="homee.html" class="btn">Back</a>
+</div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

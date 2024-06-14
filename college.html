@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico.">
+  <title>West Prime Horizon Institute Inc.</title>
+</head>
+
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    section {
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("/1715666098783.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .container {
+      width: 85%;
+      margin: auto;
+    }
+    nav {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav img {
+      width: 150px; /* Adjust the logo size as needed */
+      height: auto;
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+    }
+    nav ul li {
+      list-style: none;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+      padding: 15px 10px;
+      font-size: 20px;
+    }
+    nav ul li a:hover {
+      background-color: #eb7620;
+      transition: 0.5s ease;
+    }
+    nav ul li .active {
+      background-color: #eb7620;
+    }
+    .nav-btn {
+      color: #fff;
+      padding: 10px 20px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #f15048;
+      border-radius: 10px;
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .nav-btn:hover {
+      background-color: #4399fa;
+      transition: 0.5s ease;
+    }
+    .article {
+      text-align: center;
+    }
+    .article h1 {
+      font-size: 86px;
+      color: orange;
+      letter-spacing: 1px;
+      font-weight: 500px;
+      margin-top: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .article p {
+      font-size: 46px;
+      color: white;
+      line-height: 1.5;
+      margin-bottom: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .article .btn {
+      color: #fff;
+      padding: 5px 15px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #f15048;
+      border-radius: 10px;
+      font-size: 36px;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 10px;
+    }
+    .article .btn:hover {
+      background-color: #4399fa;
+      transition: 0.5s ease;
+    }
+    .scroll h1 {
+      font-size: 56px;
+      color: black;
+      background-color: white;
+    }
+    .hero {
+      font-size: 66px;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+    }
+    #slider {
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 50px;
+    }
+    #slider figure {
+      position: relative;
+      width: 2500px;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+    }
+    #slider figure img {
+      float: left;
+      width: 500px;
+    }
+    @keyframes slider {
+      0% { left: 0; }
+      20% { left: 0; }
+      25% { left: -500px; }
+      45% { left: -500px; }
+      50% { left: -1000px; }
+      70% { left: -1000px; }
+      75% { left: -1500px; }
+      95% { left: -1500px; }
+      100% { left: -2000px; }
+    }
+    .table-container, .sr-high-container {
+      margin-top: 50px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .table-container h2, .sr-high-container h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .table-container table, .sr-high-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table-container th, .table-container td, .sr-high-container th, .sr-high-container td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    .table-container th, .sr-high-container th {
+      background-color: #eb7620;
+      color: white;
+    }
+    .circular-image {
+      width: 50px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+      border-radius: 50%; /* Make it circular */
+    }
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      text-align: center;
+      color: orange; /* Adjusted text color for better readability on the background */
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 25px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-size: 36px;
+    }
+    nav ul li a:hover {
+      background-color: orange;
+    }   
+  </style>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homee.html"><img src="westprime logo.png" alt="Your Image" class="circular-image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Program Offered
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shs.html">Senior High School</a></li>
+                            <li><a class="dropdown-item" href="college.html">College</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="tuitionfees.html">Tuition fees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faculty&staff.html">Faculties & Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mission.html">Mission, Vision & Values</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <section>
+    <div class="container">
+        
+      <div class="article">
+        <h1><b>Welcome to College Department!</b></h1>
+        <p>Your future starts here!</p>
+        
+      </div>
+      <div class="table-container">
+        <h2>Student Enrollment by Track in 2nd Semester</h2>
+        <table>
+          <tr>
+            <th>Students Course</th>
+            <th>Total Students</th>
+          </tr>
+          <tr>
+            <td>Bachelor of Science in Information Technology & Associate in Computer Technology</td>
+            <td>407</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Arts in English Language Studies</td>
+            <td>59</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Technical Vocational Teacher Education</td>
+            <td>135</td>
+          </tr>
+          <tr>
+            <td>Computer Hardware Servicing</td>
+            <td>225</td>
+          </tr>
+          <tr>
+            <td>Weilding and Fabrication Technology</td>
+            <td>119/td>
+          </tr>
+          <tr>
+        </table>
+      </div>
+      <div class="sr-high-container">
+        <h2>College Offered Tracks</h2>
+        <table>
+          <tr>
+            <th>Track</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Bachelor of Science in Information Technology/ Associate in Computer Technology</td>
+            <td>The Bachelor of Science in Information Technology (BSIT) and Associate in Computer Technology (ACT) programs offer comprehensive education in computer systems, software development, networking, and information security. These programs equip students with the technical skills and theoretical knowledge necessary to succeed in various IT-related fields. From programming languages to database management, students learn to analyze, design, and implement IT solutions effectively.</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Arts in English Language Studies</td>
+            <td>The Bachelor of Arts in English Language Studies program explores the English language's structure, usage, and cultural significance. Through courses in linguistics, literature, and language acquisition, students analyze grammar, literature, and language teaching methods. This program prepares graduates for careers in education, communication, and publishing, emphasizing critical thinking and communication skills.</td>
+          </tr>
+          <tr>
+            <td>Bachelor of Technical Vocational Teacher Education</td>
+            <td>A Bachelor of Technical Vocational Teacher Education program prepares graduates to teach technical subjects like automotive technology, culinary arts, and construction trades. It combines theoretical knowledge with practical training, focusing on pedagogical techniques and industry-specific skills. Graduates are equipped to inspire and guide students toward successful careers in vocational fields.</td>
+          </tr>
+          <tr>
+            <td>Computer Hardware Servicing</td>
+            <td>Computer Hardware Servicing involves maintaining, repairing, and optimizing computer hardware components for optimal performance and functionality.</td>
+          </tr>
+          <tr>
+            <td>Weilding and Fabrication Technology</td>
+            <td>Welding and Fabrication Technology involves joining metal parts and shaping them into structures using welding and fabrication techniques. It's vital for creating durable metal products in industries like construction and manufacturing.</td>
+          </tr>
+        </table>
+        <table>
+            <tr>
+              <th>College Requirements</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Form 138 / Report Card</td>
+              <td ></td>
+            </tr>
+            <tr>
+              <td>Form 137</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PSA Birth Certificate Original</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Good Moral</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Diploma</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2x2 Picture (4 pcs)</td>
+              <td></td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    <br>
+    <div class="article">
+    <a href="https://docs.google.com/forms/d/1QBq9inSUyiNwmwvbGgBrljASXpvKFDYdAvAFqHxzRXE/viewform?fbclid=IwZXh0bgNhZW0CMTAAAR0WDQJUx5X6Xmt8rQY-ZxQaXUrlHhszDmBezKdRgME5KtA3ZUOFDKl52oc_aem_AQsbUZ_2WKoSR_xQ4BgpauGRZLOE52FuK7z_o_tDB_Xae6_9-0v_5a5KbxD-PcpJz9EDS4zTI-17vlPaWG5pE2sr&edit_requested=trues" class="btn">Enroll Now</a>
+</div>
+<br>
+<div class="article">
+    <a href="homee.html" class="btn">Back</a>
+</div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
